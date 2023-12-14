@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class AppConsultorio {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
+		//create var and array
 		Paciente pacientes[] = new Paciente[100];
 		int indiceCadastro = 0;
 		int indice = 0;
 		double trocaPeso = 0;
 		int op = 0;
 
-		pacientes[0] = new Paciente("h", 'm', 10, 10, 10);
-		pacientes[1] = new Paciente("h", 'm', 10, 10, 10);
-
+		//two options to menu
 		while (true) {
 			if (pacientes[0] == null) {
 				System.out.println("==============MENU==============");
@@ -34,6 +33,7 @@ public class AppConsultorio {
 			op = teclado.nextInt();
 			System.out.println();
 
+			//create the options for menu
 			if (op == 0) {
 				break;
 			}
@@ -80,7 +80,7 @@ public class AppConsultorio {
 				System.out.println("Percentual de Gordura:" + pacientes[indice].getPercentualGordura());
 			}
 			if (op == 6) {
-				System.out.println("Digite o indice do paciene para as informações");
+				System.out.println("Digite o indice do paciene para as informaÃ§Ãµes");
 				indice = teclado.nextInt();
 				System.out.println(pacientes[indice].toString());
 				System.out.println();
@@ -99,7 +99,7 @@ public class AppConsultorio {
 				if (pacientesIguais == true) {
 					System.out.println("sim");
 				} else {
-					System.out.println("não");
+					System.out.println("nÃ£o");
 				}
 			}
 		}
