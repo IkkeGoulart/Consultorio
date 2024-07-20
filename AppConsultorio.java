@@ -5,14 +5,12 @@ import java.util.Scanner;
 public class AppConsultorio {
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
-		//create var and array
 		Paciente pacientes[] = new Paciente[100];
 		int indiceCadastro = 0;
 		int indice = 0;
 		double trocaPeso = 0;
 		int op = 0;
 
-		//two options to menu
 		while (true) {
 			if (pacientes[0] == null) {
 				System.out.println("==============MENU==============");
@@ -33,7 +31,6 @@ public class AppConsultorio {
 			op = teclado.nextInt();
 			System.out.println();
 
-			//create the options for menu
 			if (op == 0) {
 				break;
 			}
