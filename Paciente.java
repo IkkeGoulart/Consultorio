@@ -1,4 +1,3 @@
-//Emanuel, Henrique e Vinicius
 package Pacote;
 
 public class Paciente {
@@ -64,7 +63,7 @@ public class Paciente {
 	}
 
 	public void setSexo(char sexo) {
-		// limitando as op��es de sexo
+		// limitando as opções de sexo
 		sexo = Character.toUpperCase(sexo);
 		if (sexo == 'M' || sexo == 'F') {
 			this.sexo = sexo;
@@ -75,7 +74,7 @@ public class Paciente {
 	}
 
 	public void setNome(String nome) {
-		// Nome Com A Primeira Letra Maisucula
+		//FORMATAÇÃO DO NOME//
 		char[] nomeMaiusculo = nome.toCharArray();
 		for (int i = 1; i < nomeMaiusculo.length; i++) {
 			if (Character.isAlphabetic(nomeMaiusculo[i])) {
@@ -120,7 +119,7 @@ public class Paciente {
 	public double getPercentualGordura() {
 		if (this.sexo == 'M') {
 			return (1.2 * this.getImc()) + (0.23 * this.idade) - 5.4;
-		} else {// if (this.sexo == 'f') {
+		} else {
 			return (1.2 * this.getImc()) + (0.23 * this.idade) - (10.8) - 5.4;
 		}
 	}
@@ -132,7 +131,7 @@ public class Paciente {
 			return "Regular";
 		} else if (24.9 <= this.getImc() && this.getImc() < 30) {
 			return "Sobrepeso";
-		} else {// if(this.getImc()>=30) {
+		} else {
 			return "Obesidade";
 		}
 	}
